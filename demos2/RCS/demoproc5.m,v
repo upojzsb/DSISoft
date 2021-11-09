@@ -1,0 +1,57 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.58;	author gilles;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.30;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.19.32;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%Called by demo2 to perform bandpass filtering
+
+demodata=hannband(demodata,25,75,200,250)
+demodata=mute(demodata,1,15)
+demodata=agc(demodata,0.075,2);
+
+state=5;
+disp('Bandpass filtering has been applied to the data.');
+disp('Processing is finished.');@
+
+
+2.0
+log
+@Release 2
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

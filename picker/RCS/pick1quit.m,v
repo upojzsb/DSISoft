@@ -1,0 +1,145 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.23.00;	author gilles;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.47.37;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.01.06.19.09.27;	author kay;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@function pick1quit()
+% This is the machine-generated representation of a Handle Graphics object
+% and its children.  Note that handle values may change when these objects
+% are re-created. This may cause problems with any callbacks written to
+% depend on the value of the handle at the time the object was saved.
+%
+% To reopen this object, just type the name of the M-file at the MATLAB
+% prompt. The M-file and its associated MAT-file must be on your path.
+
+%$Id: pick1quit.m,v 2.0 1999/05/21 18:47:37 mah Exp gilles $
+%$Log: pick1quit.m,v $
+%Revision 2.0  1999/05/21 18:47:37  mah
+%Release 2
+%
+%Revision 1.1  1999/01/06 19:09:27  kay
+%Initial revision
+%
+%
+%Copyright (C) 1998 Seismology and Electromagnetic Section/
+%Continental Geosciences Division/Geological Survey of Canada
+%
+%This library is free software; you can redistribute it and/or
+%modify it under the terms of the GNU Library General Public
+%License as published by the Free Software Foundation; either
+%version 2 of the License, or (at your option) any later version.
+%
+%This library is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+%Library General Public License for more details.
+%
+%You should have received a copy of the GNU Library General Public
+%License along with this library; if not, write to the
+%Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+%Boston, MA  02111-1307, USA.
+%
+%DSI Consortium
+%Continental Geosciences Division
+%Geological Survey of Canada
+%615 Booth St.
+%Ottawa, Ontario
+%K1A 0E9
+%
+%email: dsi@@cg.nrcan.gc.ca
+
+load pick1quit
+
+a = figure('Units','centimeters', ...
+	'Color',[0.8 0.8 0.8], ...
+	'Colormap',mat0, ...
+	'NumberTitle','off', ...
+	'Position',[0.597193 5.79277 15.0493 4.29979], ...
+	'Tag','Fig2');
+b = uicontrol('Parent',a, ...
+	'Units','normalized', ...
+	'FontUnits','normalized', ...
+	'BackgroundColor',[0.8 0.8 0.8], ...
+	'FontSize',0.472222, ...
+	'Position',[0.0653465 0.755102 0.70297 0.102041], ...
+	'String','Save picks? Enter trace header word number, then click on `save`.', ...
+	'Style','text', ...
+	'Tag','StaticText1');
+b = uicontrol('Parent',a, ...
+	'Units','normalized', ...
+	'BackgroundColor',[1 1 1], ...
+	'Position',[0.301587 0.541667 0.311508 0.180556], ...
+	'String','15', ...
+	'Style','edit', ...
+	'Tag','EditText1');
+b = uicontrol('Parent',a, ...
+	'Units','normalized', ...
+	'FontUnits','normalized', ...
+	'BackgroundColor',[0 1 1], ...
+	'Callback',mat1, ...
+	'FontSize',0.281085, ...
+	'Position',[0.242063 0.1875 0.15873 0.222222], ...
+	'String','Save', ...
+	'Tag','Pushbutton1');
+b = uicontrol('Parent',a, ...
+	'Units','normalized', ...
+	'FontUnits','normalized', ...
+	'BackgroundColor',[0 1 1], ...
+	'Callback','clear global ptimes,clear global temp,clear datasetname,close(gcbf)', ...
+	'FontSize',0.281085, ...
+	'Position',[0.521825 0.194444 0.150794 0.222222], ...
+	'String','Do Not Save', ...
+	'Tag','Pushbutton2');
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d10 1
+a10 1
+%$Id: pick1quit.m,v 1.1 1999/01/06 19:09:27 kay Exp mah $
+d12 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d10 4
+a13 2
+%$Id: $
+%$Log:$
+d15 1
+@

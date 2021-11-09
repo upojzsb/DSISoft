@@ -1,0 +1,77 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./cdpt3d]</A>
+<H1>cdpt3d</H1>
+<H2>(./cdpt3d/cdpt3d.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=cdpt3d(datain,v,strike,dip,width,binsize,depthlim)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=<A HREF = "../3.cdpt3d/cbins.html">cbins</A>(datain,v,strike,dip,width,binsize,depthlim)
+
+%three dimensional CDP (common depth point) transform
+finds reflection points in 3 dimensions using rotations and ray 
+tracing method
+
+A plot displays the survey geometry and the surface projection of 
+the reflection points.  2 points (CDP line) have to be picked by the user
+that corresponds to the starting and ending points of the bins.  
+
+creates a 3 dimensional grid of bins, sums trace energy 
+corresponding in the bin  corresponding to its reflection point for 
+a given strike and dip of the geology, normalizes by the number of 
+traces contributing energy to each bin
+uses functions '<A HREF = "../3.cdpt3d/rotcoord.html">rotcoord</A>' and 'findref3d
+use 'solve3d_v2'
+use '<A HREF = "../3.cdpt3d/slicefmap.html">slicefmap</A>' to extract 2D vertical or horizontal slices from the 
+3D volume these slices can then be displayed using '<A HREF = "../6.display/dispseis.html">dispseis</A>' 
+(DSISoft) or else 'pcolor' or 'imagesc' (MATLAB).
+
+INPUT
+datain - dataset in DSI format
+     shot and receiver locations and travel time information are 
+     taken from the headers
+     trace headers 31, 29 and 33 are shot easting, northing and 
+     elevation respectively (x,y,z)
+     trace headers 37, 35, and 39 are receiver easting, northing, 
+     and elevation respectively
+     travel time startime:samplingrate:endtime (file headers 9, 8 
+     and 10 respectively)
+v - background <A HREF = "../8.main/velocity.html">velocity</A> of the p-waves (m/s)
+strike  - strike angle in degrees from North (or mine grid North, +clockwise)
+dip  - dip angle to the right, by convention, also in degrees
+width - width on each side of the picked point perpendicular to the CDP line
+binsize - vector of bin widths in metres for fold map in x, y, and z 
+     directions.  should be set equal to sampling rate times <A HREF = "../8.main/velocity.html">velocity</A>
+depthlim - spatial limits of fold map in depth [zmin zmax]
+
+OUTPUT
+dataout - the results of performing a 3D CDP transform on the input data
+    format is a modified DSI variable.  File and trace headers still 
+    exist but the .dat section has been replaced with a .fmap extension 
+    which contains a cell array (records) of 3 dimensional arrays.  
+    This is the results of the 3D CDP transform.  There are also .xsc, 
+    .ysc, and .zsc extensions, each containing vectors describing 
+    the coordinates of the centre of each of the bins.
+
+Customized VSP Processing Software
+written by K.S. Beaty July, 1998
+last modified May, 1999
+by G. Perron
+last modified by G. Bellefleur, May, 2000
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../3.cdpt3d/cdp3d.html">cdp3d</A>          ./cdpt3d/cdp3d.m</LI>
+<LI><A HREF = "../3.cdpt3d/rotcoord.html">rotcoord</A>       ./cdpt3d/rotcoord.m</LI>
+</UL></pre>
+This function is called by
+<pre><UL>
+<LI><A HREF = "../1../startup.html">startup</A>        ./startup.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

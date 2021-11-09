@@ -1,0 +1,35 @@
+<TITLE>/suptitle.html</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>velocity</H1>
+<H2>(./main/velocity.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>dataout=velocity(datain,pltflg);</pre>
+<HR><H3>Help text</H3>
+<pre>
+dataout=velocity(datain);
+
+This function computes the average P-wave velocity of a DSI profile
+It does it by linear regression and by averaging direct 
+source-to-receiver distance/first break times
+
+Input variables:
+datain is a dsisoft variable sorted in 3-components (header word 4)
+pltflg is a plotting flag
+if pltflg = 1 there will be a graphic output
+if pltflg IS NOT 1 (else) that there will not be a graphical output
+
+Output variable:
+dataout is the updated dsisoft variable with the average velocity in header word 60
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../8.main/vaplot.html">vaplot</A>         ./main/vaplot.m</LI>
+<LI><A HREF = "../8.main/vaplotrec.html">vaplotrec</A>      ./main/vaplotrec.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

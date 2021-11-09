@@ -1,0 +1,37 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>ener</H1>
+<H2>(./main/ener.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=ener(datain,T1,T2)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=ener(datain,T1,T2)
+
+This function will do energy balancing on the traces in datain based
+on the amplitudes of the data in the time window between times T1
+and T2 (both in seconds).  Each trace is multiplied by a factor equal to
+the sum over the specified time window of one over the amplitude squared 
+of that trace. 
+
+DSI customized VSP processing software
+written by Kristen Beaty Nov. 1997
+based on INSIGHT module 'ener'
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../4.demos/demoproc.html">demoproc</A>       ./demos/demoproc.m</LI>
+<LI><A HREF = "../5.demos2/demoproc3.html">demoproc3</A>      ./demos2/demoproc3.m</LI>
+<LI><A HREF = "../6.display/dispseis.html">dispseis</A>       ./display/dispseis.m</LI>
+<LI><A HREF = "../8.main/medirm.html">medirm</A>         ./main/medirm.m</LI>
+<LI><A HREF = "../9.picker/pick1comp.html">pick1comp</A>      ./picker/pick1comp.m</LI>
+<LI><A HREF = "../9.picker/pickfb.html">pickfb</A>         ./picker/pickfb.m</LI>
+<LI><A HREF = "../4.demos/process.html">process</A>        ./demos/process.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

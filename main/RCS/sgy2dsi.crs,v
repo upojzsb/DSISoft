@@ -1,0 +1,140 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+3.0
+date	2000.06.13.19.22.00;	author gilles;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.46.33;	author mah;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.03.03.21.42.20;	author kay;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.03.03.19.14.56;	author kay;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.03.01.17.12.40;	author kay;	state Exp;
+branches;
+next	;
+
+
+desc
+@SEG-Y <-> dsisoft crosswire file, SU flavour.
+@
+
+
+3.0
+log
+@Release 3
+@
+text
+@% Crosswire file for SEG-Y data into DSIsoft format 
+% using the segy2mat function.
+% This version is designed for the Seismic-Unix (SU) version of 
+% SEG-Y output, with our convention for trid (43=vertical, 44,45=horizontal). 
+% segy type values are 1 for char, 2 for int16, 3 for int32
+% Note that mat2segy uses the same crosswire file, the multiplier and
+%additive constant being interpreted instead as a divisor and subtractive
+%constant.  The same crosswire file is used in both directions.
+
+%segy segy multiplier add	DSI 	description
+%byte type                  header
+%                           word
+13    3     1.0       0      1    % original trace#
+9     3     1.0       0      2    % FFID
+21    3     1.0       0      3    % CDP #
+29    2     1.0     -42      4    % trace component 43->1=vert 44->2=h1 45->3=h3
+29	  2		1.0	      0	     6    % trace status
+17	  3		1.0       0     26    % energy source point number (source point ) 
+77    3     1.0       0     29    % source northing 
+73    3     1.0       0     31    % source easting 
+45    3     1.0       0     33	  % source elevation 
+85    3     1.0       0     35    % recv northing
+81    3     1.0       0     37    % recv easting
+41    3     1.0       0     39    % recv elevation
+53    3     1.0       0     51    % datum elevation
+37    3     1.0       0     53    % source-recv offset (or other...)
+49    3     1.0       0     51    % shot depth
+95    2     1.0       0     55    % uphole time (ms?)
+
+%$Id: sgy2dsi.crs,v 2.0 1999/05/21 18:46:33 mah Exp gilles $
+%$Log: sgy2dsi.crs,v $
+%Revision 2.0  1999/05/21 18:46:33  mah
+%Release 2
+%
+%Revision 1.3  1999/03/03 21:42:20  kay
+%Typo, didn't comment a comment!
+%
+%Revision 1.2  1999/03/03 19:14:56  kay
+%Added to the comments.
+%
+%Revision 1.1  1999/03/01 17:12:40  kay
+%Initial revision
+%
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d30 1
+a30 1
+%$Id: sgy2dsi.crs,v 1.3 1999/03/03 21:42:20 kay Exp mah $
+d32 3
+@
+
+
+1.3
+log
+@Typo, didn't comment a comment!
+@
+text
+@d30 1
+a30 1
+%$Id: sgy2dsi.crs,v 1.2 1999/03/03 19:14:56 kay Exp kay $
+d32 3
+@
+
+
+1.2
+log
+@Added to the comments.
+@
+text
+@d7 2
+a8 2
+additive constant being interpreted instead as a divisor and subtractive
+constant.  The same crosswire file is used in both directions.
+d30 1
+a30 1
+%$Id: sgy2dsi.crs,v 1.1 1999/03/01 17:12:40 kay Exp kay $
+d32 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d6 3
+d30 5
+a34 2
+%$Id:$
+%$Log:$
+@

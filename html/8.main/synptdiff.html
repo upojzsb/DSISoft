@@ -1,0 +1,31 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>synptdiff</H1>
+<H2>(./main/synptdiff.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=synptdiff(datain,pE,pN,pElev,v,cf)</pre>
+<HR><H3>Help text</H3>
+<pre>
+ [dataout]=synptdiff(datain,pE,pN,pElev,v,cf)
+ Synthetic travel times (no amplitude info) assuming a medium of constant 
+ <A HREF = "../8.main/velocity.html">velocity</A> v, for the direct arrival and the arrival  from a point diffractor 
+ located at p=[x,y,z]=[pE,pN,pElev].  
+ Datain is a DSI variable.
+ The source and receiver positions for each trace in datain are used along 
+ with p and v to calculate the travel times.
+ cf is the centre frequency of a Ricker wavelet convolved with the synthetic.
+ DSI customized VSP processing software
+ by I. Kay (April 1999)
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../8.main/txdirect.html">txdirect</A>       ./main/txdirect.m</LI>
+<LI><A HREF = "../8.main/txptdiff.html">txptdiff</A>       ./main/txptdiff.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

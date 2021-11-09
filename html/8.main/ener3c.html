@@ -1,0 +1,29 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>ener3c</H1>
+<H2>(./main/ener3c.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=ener3c(datain,T1,T2)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=ener3c(datain,T1,T2)
+
+This function will do energy balancing on the traces in datain based
+on the amplitudes of the data in the time window between times T1
+and T2 (both in seconds).  Each trace is multiplied by a factor equal to
+the sum over the specified time window of one over the amplitude squared 
+of the traces from the 3 components. This version preserves the
+amplitude ratio between the components.  
+
+DSI customized VSP processing software
+written by G. Bellefleur March,2000  
+based on <A HREF = "../8.main/ener.html">ener</A>.m written by Kristen Beaty Nov. 1997
+written based on INSIGHT module '<A HREF = "../8.main/ener.html">ener</A>'
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

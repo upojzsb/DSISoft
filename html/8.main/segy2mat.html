@@ -1,0 +1,49 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>segy2mat</H1>
+<H2>(./main/segy2mat.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=segy2mat(filename,cross_wire_file,platform)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=segy2mat(filename,cross_wire_file,platform)
+
+This function reads data stored in segy format, the oil industry standard
+for seismic data exchange, and converts it into a MATLAB variable in DSI
+format.  This module has been written to use a crosswire file to deliniate
+trace header locations as there are many variations on the segy format.
+The crosswire file is and ASCII file consisting of numbers only separted
+into columns using either spaces or Tabs.  MATLAB-style comments can be
+included in the file provided that they begin with a percent character '%'.
+The file should consist of 5 columns: segy byte to start at (byte 1 is
+beginning of a trace header), the format of this element (1 for 'char',
+2 for 'int16', and 3 for 'int32'), a multiplier, a value to add to the
+element, and the trace header word to store this value in the DSI variable.
+
+See the following paper for a description of the standard segy format:
+Barry, K.M., Cavers, D.A., and Kneale, C.W., Recomended Standards for
+Digital Tape Formats, Geophysics, Vol. 40, No. 2 (April 1975), P. 344-352.
+
+INPUT
+filename - name of segy file.  Must be enclosed in single quotes.
+cross_wire_file - name of crosswire file.  Must be enclosed in single quotes.
+platform =	'l' for little-endian (PC) files
+		'b' for big-endian (Unix) files
+
+OUTPUT
+dataout - data in DSI format
+
+DSISoft Customized VSP Processing software
+written by K.S. Beaty June, 1998
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../8.main/ibm2ieee.html">ibm2ieee</A>       ./main/ibm2ieee.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

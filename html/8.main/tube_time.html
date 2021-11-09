@@ -1,0 +1,33 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>tube_time</H1>
+<H2>(./main/tube_time.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=tube_time(datain,hdr1,hdr2,v);</pre>
+<HR><H3>Help text</H3>
+<pre>
+
+function [dataout]=tube_time(datain,hdr1,hdr2,v);
+
+This function removes all tube wave occurences on a DSI <A HREF = "../8.main/profil.html">profil</A>
+by means of median filtering.  The function introduces travel times for typical
+upgoing and downgoing tube waves.  It uses those travel times to <A HREF = "../8.main/flat.html">flat</A> and filter the data
+
+Input variables:
+datain = dsisoft variable in 3-component
+hdr1 = header word to put the upgoing travel times
+hdr2 = header word to put the downgoing travel times
+v = estimated tube wave <A HREF = "../8.main/velocity.html">velocity</A>
+
+Output variable:
+dataout = dsisoft variable with tube waves filtered out
+
+Written by G. Perron, May 2000  
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

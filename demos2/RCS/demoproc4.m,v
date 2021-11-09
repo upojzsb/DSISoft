@@ -1,0 +1,80 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.56;	author gilles;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.06.18.15.53.49;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.29;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.19.26;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%Called by demo2 to perform f-k filtering
+
+load june16reject.mat; %loads in the rejection filter for the down going waves
+demodata=fkfilt(demodata,june16reject,300,10,1,5,1); %fkfilt the 1st record
+
+state=4;
+disp('f-k filtering has been applied to the data.');
+disp('Please apply Bandpass Filtering next.');
+@
+
+
+2.1
+log
+@for different data set
+@
+text
+@@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d3 2
+a4 8
+load apr21downreject.mat; %loads in the rejection filter for the down going waves
+demodata=fkfilt(demodata,apr21downreject,400,10,1,5,1); %fkfilt the 1st record
+
+load apr21tubereject.mat; %loads in the rejection filter for the tube wave
+demodata=fkfilt(demodata,apr21tubereject,400,10,1,5,1); %fkfilt the 1st record
+
+load apr21tubereject2.mat; %loads in the rejection filter for the tube wave
+demodata=fkfilt(demodata,apr21tubereject2,400,10,1,5,1); %fkfilt the 1st record
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

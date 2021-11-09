@@ -1,0 +1,11 @@
+driv 'vspn526band2.sgy'
+open 2, 2, 'vspn526.dat'
+olis 'output.lis'
+ocrs 'itasegy2ita.crs'
+type 'SEGY'
+form 0
+tape 'file' 0 3 1
+chan 1 356 1
+key 0
+time 0 2 0
+samp 0.0005

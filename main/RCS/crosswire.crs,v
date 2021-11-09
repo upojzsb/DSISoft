@@ -1,0 +1,133 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+3.0
+date	2000.06.13.19.19.59;	author gilles;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.45.22;	author mah;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	99.03.08.17.56.51;	author kay;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	99.01.28.13.23.28;	author kay;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.01.25.18.59.30;	author kay;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.01.06.19.09.02;	author kay;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%crosswire file for reading trace header data into DSI format from Lithoprobe
+%segy format using segy2mat
+%segy type values are 1 for char, 2 for int16, 3 for int32
+%segy segy multiplier add	DSI 	description
+%byte type                  header
+%                           word
+13    3     1.0     0    1    % original trace#
+9     3     1.0     0    2    % FFID
+21    3     1.0     0    3    % CDP #
+29    2     1.0   -42    4    % trace component 43->1=vert 44->2=h1 45->3=h3
+17	  3		1.0     0   26    % energy source point number (source point ) 
+77    3     1.0     0   29    % source northing 
+73    3     1.0     0   31    % source easting 
+45    3     1.0     0   33	  % source elevation 
+85    3     1.0     0   35    % recv northing
+81    3     1.0     0   37    % recv easting
+41    3     1.0     0   39    % recv elevation
+53    3     1.0     0   51    % datum elevation
+37    3     1.0     0   53    % source-recv offset (or other...)
+49    3     1.0     0   51    % shot depth
+95    2     1.0     0   55    % uphole time (ms?)
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@a10 1
+29	  2		1.0	    0	 6    % trace status
+@
+
+
+1.2
+log
+@Added fields so geometry makes it into dsisoft.
+@
+text
+@d4 1
+a4 1
+%segy segy 	multiplier add	DSI 	description
+d7 3
+a9 3
+13	  	3	   1.0	  0    1		% original trace#
+9		3		1.0     0    2		% FFID
+21		3		1.0     0    3		% CDP #
+d11 2
+a12 2
+29		2		1.0	  0	 6    % trace status
+17		3		1.0     0   26    % energy source point number (source point ) 
+d15 1
+a15 1
+45    3     1.0     0   33		% source elevation 
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 19
+a22 5
+%segy byte	segy type	multiplier	add	DSI header #	description
+13		3		1.0		0	1		%original trace#
+9		3		1.0		0	2		%FFID
+21		3		1.0		0	3		%CDP #
+29		2		1.0		0	6		%trace status
+@

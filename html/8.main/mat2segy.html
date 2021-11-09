@@ -1,0 +1,57 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>mat2segy</H1>
+<H2>(./main/mat2segy.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>mat2segy(datain,filename,cross_wire_file,platform,reel_id_header)</pre>
+<HR><H3>Help text</H3>
+<pre>
+ mat2segy(datain,filename,crosswire,platform,reel_id_header)
+
+ This function stores a DSI variable in SEG-Y format.
+
+ This module has been written to use a crosswire file to designate
+ trace header locations. 
+
+ This is the same crosswire file as used for '<A HREF = "../8.main/segy2mat.html">segy2mat</A>'.
+
+ The crosswire file is and ASCII file consisting of numbers only separted
+ into columns using either spaces or Tabs.  MATLAB-style comments can be
+ included in the file provided that they begin with a percent character '%'.
+ The file should consist of 5 columns: segy byte to start at (byte 1 is
+ beginning of a trace header), the format of this element (1 for 'char',
+ 2 for 'int16', and 3 for 'int32'), a divisor, a subtractve constant 
+ and the DSI trace header word where this value is stored. 
+
+ For segy-mat(dsi) the multiplier is applied before the additive constant, 
+ so for mat(dsi) -&gt; segy the subtractive constant is applied before the
+ divisor.
+
+ The SEG-Y format is defined in:
+ Barry, K.M., Cavers, D.A., and Kneale, C.W., Recomended Standards for
+ Digital Tape Formats, Geophysics, Vol. 40, No. 2 (April 1975), P. 344-352.
+
+ This script's output is not standard SEG-Y.  The values are stored as native
+ floating point format, rather than IBM floating point format. 
+
+
+INPUT
+datain - seismic data in DSI format
+filename - name of segy file.  Must be enclosed in single quotes.
+cross_wire_file - name of crosswire file.  Must be enclosed in single quotes.
+platform =	'l' for little-endian (PC) files
+		'b' for big-endian (Unix) files
+reel_id_header - string variable containing a description of the file
+	this string will be stored in the reel identification header of
+	the segy file
+
+DSISoft Customized VSP Processing software
+written by K.S. Beaty June, 1998
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

@@ -1,0 +1,51 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./display]</A>
+<H1>dispseis</H1>
+<H2>(./display/dispseis.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>updateplot(a)</pre>
+<HR><H3>Help text</H3>
+<pre>
+dispseis
+
+GUI interface program for displaying seismic data in DSI format.
+DISPSEIS calls up a menu for loading a dataset and selecting plotting
+parameters.  There are options for plotting with energy balancing or <A HREF = "../8.main/agc.html">agc</A>
+scaling.  Display options include wtva, va, wt, and grayscale.  Polarity
+reversal and zoom are available and mouse position can be tracked by
+pressing down the mouse button within the plot window.
+
+DISPSEIS can also be used to display seismic attributes data.  Seismic
+attribute (SA) data is stored in a DSI format variable with file header
+word 4 set to 1 as a flag.  There are normally either 3 (single
+component) or 9 (for 3 component data) records in a SA variable.
+Each component of the initial dataset has 3 records set aside for
+instantaneous amplitude, frequency, and phase information in that order.
+
+DSI customised processing software
+written by K.S. Beaty January, 1998
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../8.main/agc.html">agc</A>            ./main/agc.m</LI>
+<LI><A HREF = "../6.display/dispcrss.html">dispcrss</A>       ./display/dispcrss.m</LI>
+<LI><A HREF = "../6.display/displayl.html">displayl</A>       ./display/displayl.m</LI>
+<LI><A HREF = "../6.display/dispmenu.html">dispmenu</A>       ./display/dispmenu.m</LI>
+<LI><A HREF = "../8.main/ener.html">ener</A>           ./main/ener.m</LI>
+<LI><A HREF = "../6.display/seisatrplot.html">seisatrplot</A>    ./display/seisatrplot.m</LI>
+<LI><A HREF = "../6.display/seisplot.html">seisplot</A>       ./display/seisplot.m</LI>
+</UL></pre>
+This function is called by
+<pre><UL>
+<LI><A HREF = "../5.demos2/demo2.html">demo2</A>          ./demos2/demo2.m</LI>
+<LI><A HREF = "../6.display/displayl.html">displayl</A>       ./display/displayl.m</LI>
+<LI><A HREF = "../6.display/dispmenu.html">dispmenu</A>       ./display/dispmenu.m</LI>
+<LI><A HREF = "../4.demos/dsidemo.html">dsidemo</A>        ./demos/dsidemo.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

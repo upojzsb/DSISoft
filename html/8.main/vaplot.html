@@ -1,0 +1,51 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>vaplot</H1>
+<H2>(./main/vaplot.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>vaplot(datain,t1,t2,tr1,tr2,scal,pltflg,scfact,color,headw,trcin,insec,rec,outflg,filename,titletxt)</pre>
+<HR><H3>Help text</H3>
+<pre>
+
+vaplot(datain,t1,t2,tr1,tr2,scal,pltflg,scfact,color,headw,trcin,insec,rec,outflg,filename,titletxt)
+
+This function creates a PostScript file of one record of a DSISoft variable.  It uses the <A HREF = "../6.display/seisplot.html">seisplot</A>.m 
+function for the first 11 input parameters (up to tstart included).  Please refer to <A HREF = "../6.display/seisplot.html">seisplot</A>.m for
+the description of these input variables.  Vaplot.m lets you specify the number of traces/inch and 
+inches/second.
+Vaplot.m also suggest the media on which to produce your plots
+
+INPUT VARIABLES
+datain - input data
+t1 - start time of data to be displayed
+t2 - end time of data to be displayed
+tr1 - first trace to be displayed
+tr2 - last trace to be displayed
+scal - 1 for max, 0 for ave
+pltflg - 1 plot only filled peaks, 0 plot wiggle traces and filled peaks,
+2 plots wiggle traces only and 3 or more plots grayscale image
+scfact - scaling factor
+color - trace colour 
+headw - header word to be annotated
+trcin - traces per inch
+insec - inches per second
+rec - record of the DSISoft variable to be ploted
+outflg - format of the output file 0==postscript 1==pcl 2==eps
+filename - path and name of the output Postscript file to be created by vaplot.m
+titletxt - text for plot title
+
+Written by G. Perron January 21st, 1999
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../8.main/azimuth.html">azimuth</A>        ./main/azimuth.m</LI>
+<LI><A HREF = "../6.display/seisplot.html">seisplot</A>       ./display/seisplot.m</LI>
+<LI><A HREF = "../8.main/velocity.html">velocity</A>       ./main/velocity.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

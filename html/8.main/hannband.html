@@ -1,0 +1,39 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>hannband</H1>
+<H2>(./main/hannband.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=hannband(datain,lowstop,lowpass,highpass,highstop)</pre>
+<HR><H3>Help text</H3>
+<pre>
+ [dataout]=hannband(datain,lowstop,lowpass,highpass,highstop)
+
+This function will filter your data using a <A HREF = "../8.main/bandpass.html">bandpass</A>
+Finite Impulse Response (FIR) filter where a hanning window
+will be used.
+'lowstop' is the frequency in Hz below which the signal is not transmitted
+'lowpass' is the frequency in Hz above which the signal is transmitted
+'highpass' is the frequency in Hz below which the signal is transmitted
+'highstop' is the frequency in Hz above which the signal is not transmitted
+
+ A hanning window will be used in order to give a 
+ passband ripple of 3dB and a stopband ripple of 40dB in the power domain
+
+ Warning: The program does not check for unreasonable parameters
+
+This is based off of the theory developed in
+Digital Signal Processing by Alan V. Oppenheim &amp; Ronald W. Schafer
+
+Written by Marko Mah January 1999
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../5.demos2/demoproc5.html">demoproc5</A>      ./demos2/demoproc5.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

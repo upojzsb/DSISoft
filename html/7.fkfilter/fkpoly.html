@@ -1,0 +1,65 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./fkfilter]</A>
+<H1>fkpoly</H1>
+<H2>(./fkfilter/fkpoly.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>fkpoly(action)</pre>
+<HR><H3>Help text</H3>
+<pre>
+fkpoly
+
+Interactive module used to pick a polygone for fk filtering.  The option is now
+available to view results of filtering using user selected polygon within the
+module.  For processing data, polygon is usually picked in the program then
+passed to the '<A HREF = "../7.fkfilter/fkfilt.html">fkfilt</A>' processing module from a processing script.
+
+INPUT
+input parameters should be specified in the menu of this module.
+Data should be in DSI format.
+Max. Freq. is the maximum frequency to be examined in the data
+dx is the spacing between traces
+the 'polygone' input parameter is optional.  It allows visualization of
+polygones that have been saved previously
+
+OUTPUT
+x,y coordinates of the corners of filter polygone; give name at prompt
+
+There are buttons on the display screen for zoom, full (zooming out),
+menu (brings menu screen to the front), quit (exits program, prompts for
+name of variable in which to save picked polygon), pick (initiates picking
+of a new polygone.  Pick with left mouse button, use right button to close
+polygon) and clear (clears existing polygon from screen).  There are four
+radio buttons that control the display.  'FK' displays the fk spectrum and
+allows picking, 'unfiltered' displays the unfiltered data, 'pass' displays
+the data with a pass filter applied and 'reject' does the same except the
+contents of the polygone is rejected.
+
+note - requires files <A HREF = "../7.fkfilter/fkfig3.html">fkfig3</A>, <A HREF = "../7.fkfilter/fkquit.html">fkquit</A>, <A HREF = "../7.fkfilter/fkmenu.html">fkmenu</A>, pickfk, and fkfilt
+
+
+DSI customized VSP processing software
+developed by G. Perron and K.S. Beaty
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../7.fkfilter/fkfig3.html">fkfig3</A>         ./fkfilter/fkfig3.m</LI>
+<LI><A HREF = "../7.fkfilter/fkfilt.html">fkfilt</A>         ./fkfilter/fkfilt.m</LI>
+<LI><A HREF = "../7.fkfilter/fkmenu.html">fkmenu</A>         ./fkfilter/fkmenu.m</LI>
+<LI><A HREF = "../7.fkfilter/fkquit.html">fkquit</A>         ./fkfilter/fkquit.m</LI>
+<LI><A HREF = "../7.fkfilter/pick_fk.html">pick_fk</A>        ./fkfilter/pick_fk.m</LI>
+<LI><A HREF = "../6.display/seisplot.html">seisplot</A>       ./display/seisplot.m</LI>
+</UL></pre>
+This function is called by
+<pre><UL>
+<LI><A HREF = "../5.demos2/demo2.html">demo2</A>          ./demos2/demo2.m</LI>
+<LI><A HREF = "../4.demos/dsidemo.html">dsidemo</A>        ./demos/dsidemo.m</LI>
+<LI><A HREF = "../7.fkfilter/fkfig3.html">fkfig3</A>         ./fkfilter/fkfig3.m</LI>
+<LI><A HREF = "../7.fkfilter/fkmenu.html">fkmenu</A>         ./fkfilter/fkmenu.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

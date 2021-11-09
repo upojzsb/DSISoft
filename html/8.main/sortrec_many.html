@@ -1,0 +1,45 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>sortrec_many</H1>
+<H2>(./main/sortrec_many.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=sortrec_many(datain,sort_flg1,sort_flg2,sort_flg3,sort_flg4,sort_flg5,sort_flg6,sort_flg7)</pre>
+<HR><H3>Help text</H3>
+<pre>
+sortrec_many -&gt; designed to sort traces into records according to sort_flg1
+and then within the record by sort_flg1,sort_flg2, .... sort_flg7
+Not all sort_flgs need to be filled in
+this function is able to sort according to 7 headers if necessary
+
+function [dataout]=sortrec_new(datain,sort_flg1,sort_flg2,sort_flg3,sort_flg4,sort_flg5,sort_flg6,sort_flg7)
+
+sort_flg1 - variable indicating the trace header word containing the values
+to be sorted by.  Traces with the same value in the indicated header word
+will be grouped together.
+
+Official DSI data protocol trace header number significance:
+    2 - field file ID (FFID)
+    3 - CDP number
+    4 - component (1==h1,2==h2, 3==z, 1+n*3==r, 2+n*3==t, 3+n*3==rotated z)
+     n above is number of rotations that component has been subjected to
+    26 - shot ID
+    27 - receiver ID
+
+sort_flg2, sort_flg3, ... etc ... - trace header word containing variable 
+to sort traces within record by, example wire line depth. If only one
+sort flag is used or all other sort flags are set to zero, then the 
+traces will not be sorted within the record.
+
+Warning: NO checking done for valid trace header words
+
+DSI customized VSP processing software
+Based on module by Marko Mah January 1999
+Written by Marko Mah February 1999
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

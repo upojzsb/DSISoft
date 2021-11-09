@@ -1,0 +1,23 @@
+#!/bin/sh
+
+co -l startup.m
+ci -r3.0 -f -u startup.m <<END
+Release 3
+.
+END
+for dir in aspec qc_dsi cdpt3d demos demos2 display fkfilter \
+	main picker plotheaders
+do
+cd $dir
+for file in * ; do
+	if [ -f $file ]   ; then
+	echo checking in $file
+	co -l $file
+	ci -r3.0 -u -f $file <<END
+Release 3
+.
+END
+	fi
+done
+cd ..
+done

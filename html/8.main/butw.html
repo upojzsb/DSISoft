@@ -1,0 +1,33 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>butw</H1>
+<H2>(./main/butw.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=butw(datain,low1,low2,high1,high2,Rp,Rs)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=butw(datain,low1,low2,high1,high2,Rp,Rs)
+
+Zero phase Butterworth <A HREF = "../8.main/bandpass.html">bandpass</A> filter.
+
+low1,low2,high1,high2 - frequencies describing the filter
+Filter is designed so that region between 'low2' and 'high1' is attenuated
+by less than 3 dB and region before 'low1' and after 'high2' is attenuated
+by at least 20 dB.
+Rp - attenuation max within pass band (dB) (around 3 dB is good)
+Rs - attenuation at outside frequencies (dB) (try 20 or 40)
+
+All frequencies are in Hertz (Hz)
+
+Note - uses functions from signal processing toolbox
+
+DSI customized VSP processing software
+written by Kristen Beaty January, 1998
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

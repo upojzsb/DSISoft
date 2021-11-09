@@ -1,0 +1,37 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>b_rise</H1>
+<H2>(./main/b_rise.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>risetime=findrisetime(xd,k,npts)</pre>
+<HR><H3>Help text</H3>
+<pre>
+function [dataout,risetime]=b_rise(datain,headwd)
+	  dataout=b_rise(datain,headwd)
+
+function to calculate rise time of a picked arrival
+requires first break picks to be set in headers (use <A HREF = "../9.picker/pick1comp.html">pick1comp</A>
+or <A HREF = "../9.picker/pickfb.html">pickfb</A> to set picks)
+
+INPUT
+datain - dataset in DSI format
+headwd - index of trace header containing pick times
+
+OUTPUT
+dataout - dataset in DSI format with rise times stored in trace header 10
+risetime - cell array with a vector of rise times for each record
+
+Based on the description of how to determine rise time given in:
+Gladwin, M.T. and Stacey, F.D, Anelastic Degradation of Acoustic Pulses
+in Rock, Physics of the Earth and Planetary Interiors, 8 (1974) 332-336.
+
+Customized VSP processing software
+written by K.S. Beaty
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

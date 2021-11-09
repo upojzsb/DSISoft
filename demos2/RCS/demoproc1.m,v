@@ -1,0 +1,85 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.51;	author gilles;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.06.18.15.53.21;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.25;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.19.00;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@% called by demo2 to perform electrical noise removal
+
+% the following removes the harmonics from the data
+% we will use harmon_new on the data by analyzing the last
+% second of data because in general there is no signal present there
+
+demodata=harmon_new(demodata,299,301,0.01,0,0.6); %removes 300Hz
+demodata=harmon_new(demodata,538,542,0.01,0,0.6); %removes 540Hz
+state=1;
+disp('Removed 300Hz and 540Hz harmonics')
+disp('Please apply Predictive Deconvolution next.')
+@
+
+
+2.1
+log
+@for different data set
+@
+text
+@@
+
+
+2.0
+log
+@Release 2
+@
+text
+@a6 2
+demodata=harmon_new(demodata,59,61,0.005,0,0.6); %removes 60Hz
+demodata=harmon_new(demodata,179,181,0.01,0,0.6); %removes 180Hz
+a7 2
+demodata=harmon_new(demodata,358,362,0.01,0,0.6); %removes 360Hz
+demodata=harmon_new(demodata,418,422,0.01,0,0.6); %removes 420Hz
+a8 2
+demodata=harmon_new(demodata,657,663,0.01,0,0.6); %removes 660Hz
+demodata=harmon_new(demodata,777,783,0.01,0,0.6); %removes 780Hz
+d10 1
+a10 1
+disp('Removed 60Hz, 180Hz, 300Hz, 360Hz, 420Hz, 540Hz, 660Hz, and 780 Hz harmonics')
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

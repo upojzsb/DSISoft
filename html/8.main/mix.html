@@ -1,0 +1,28 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>mix</H1>
+<H2>(./main/mix.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=mix(datain,weights)</pre>
+<HR><H3>Help text</H3>
+<pre>
+function [dataout]=mix(datain,weights)
+
+lateral trace mixing with user specified weights
+similar to INSIGHT module 'mix'
+
+datain - is in official DSI format
+weights - is a vector of weight factors for the mix.  ex. [0.12,0.76,0.12]
+is a typical triangle weighted mix.  elements of 'weight' should add up to 1
+length of weights or number of weights must be an odd number
+
+DSI customized VSP processing software
+written by Kristen Beaty November, 1997
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

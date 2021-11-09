@@ -1,0 +1,21 @@
+%crosswire file for reading trace header data into DSI format from Lithoprobe
+%segy format using segy2mat
+%segy type values are 1 for char, 2 for int16, 3 for int32
+%segy segy multiplier add	DSI 	description
+%byte type                  header
+%                           word
+13    3     1.0     0    1    % original trace#
+9     3     1.0     0    2    % FFID
+21    3     1.0     0    3    % CDP #
+29    2     1.0   -42    4    % trace component 43->1=vert 44->2=h1 45->3=h3
+17	  3		1.0     0   26    % energy source point number (source point ) 
+77    3     1.0     0   29    % source northing 
+73    3     1.0     0   31    % source easting 
+45    3     1.0     0   33	  % source elevation 
+85    3     1.0     0   35    % recv northing
+81    3     1.0     0   37    % recv easting
+41    3     1.0     0   39    % recv elevation
+53    3     1.0     0   51    % datum elevation
+37    3     1.0     0   53    % source-recv offset (or other...)
+49    3     1.0     0   51    % shot depth
+95    2     1.0     0   55    % uphole time (ms?)

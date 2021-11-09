@@ -1,0 +1,75 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.52;	author gilles;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.06.18.15.53.30;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.26;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.19.10;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%Called by demo2 to perform a predictive deconvolution
+
+state=2;
+disp('Predictive Deconvolution is not needed on this dataset.');
+disp('Please apply Median Filter next.');
+@
+
+
+2.1
+log
+@for different data set
+@
+text
+@@
+
+
+2.0
+log
+@Release 2
+@
+text
+@a2 4
+demodata=hannlow(demodata,400,1000)
+demodata=flat2(demodata,0.05,15); %flattens on first breaks
+demodata=preddecon(demodata,0,0.20,0.00275,0.003,1); %pred. decon the vertical comp.
+demodata=unflat2(demodata,0.05,15); %unflattens on the first breaks
+d4 1
+a4 1
+disp('Predictive Deconvolution has been applied.');
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

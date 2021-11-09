@@ -1,0 +1,86 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.49;	author gilles;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	99.06.18.15.53.10;	author mah;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.05.28.13.29.12;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.24;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.18.51;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@% Called by demo2 to load data
+
+load demodata.mat
+demodata=subset(demodata,1,103,0,1,1,1);
+disp('demodata loaded')
+disp('Please apply Electrical Noise Removal next.')
+state=0;
+@
+
+
+2.2
+log
+@for different dataset
+@
+text
+@@
+
+
+2.1
+log
+@take a smaller set of the data
+@
+text
+@d4 1
+a4 1
+demodata=subset(demodata,201,364,0,0.6,1,1);
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d4 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

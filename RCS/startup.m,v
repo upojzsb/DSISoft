@@ -1,0 +1,171 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.17.33;	author gilles;	state Exp;
+branches;
+next	2.3;
+
+2.3
+date	2000.06.13.17.30.32;	author gilles;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	99.06.18.18.32.56;	author mah;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.05.28.14.32.39;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.40.39;	author mah;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	99.05.13.19.20.31;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.01.11.13.44.29;	author kay;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%startup file for MATLAB
+codedir='/mnt/adam/dsisoft/'; %replace with working directory UNIX
+%codedir='d:\dsisoft\'; %replace with working directory WINDOWS
+
+%specify search paths for DSIsoft modules
+path(path,codedir);
+path(path,[codedir,'aspec']);
+path(path,[codedir,'plotheaders']);
+path(path,[codedir,'picker']);
+path(path,[codedir,'display']);
+path(path,[codedir,'demos']);
+path(path,[codedir,'demos2']);
+path(path,[codedir,'main']);
+path(path,[codedir,'fkfilter']);
+path(path,[codedir,'qc_dsi']);
+path(path,[codedir,'cdpt3d']);
+clear codedir
+
+%$Id: startup.m,v 2.3 2000/06/13 17:30:32 gilles Exp gilles $
+%$Log: startup.m,v $
+%Revision 2.3  2000/06/13 17:30:32  gilles
+%*** empty log message ***
+%
+%Revision 2.2  1999/06/18 18:32:56  mah
+%updating dir
+%
+%Revision 2.1  1999/05/28 14:32:39  mah
+%updated dir
+%
+%Revision 2.0  1999/05/21 18:40:39  mah
+%Release 2
+%
+%Revision 1.2  1999/05/13 19:20:31  mah
+%added demos2
+%
+%Revision 1.1  1999/01/11 13:44:29  kay
+%Initial revision
+%
+@
+
+
+2.3
+log
+@*** empty log message ***
+@
+text
+@d19 1
+a19 1
+%$Id: startup.m,v 2.2 1999/06/18 18:32:56 mah Exp gilles $
+d21 3
+@
+
+
+2.2
+log
+@updating dir
+@
+text
+@d15 2
+d19 1
+a19 1
+%$Id: startup.m,v 2.1 1999/05/28 14:32:39 mah Exp mah $
+d21 3
+@
+
+
+2.1
+log
+@updated dir
+@
+text
+@d2 1
+a2 1
+codedir='/mnt/adam/dsisoftv2/'; %replace with working directory UNIX
+d17 1
+a17 1
+%$Id: startup.m,v 2.0 1999/05/21 18:40:39 mah Exp mah $
+d19 3
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d2 1
+a2 1
+codedir='/mnt/adam/dsisoft/'; %replace with working directory UNIX
+d17 1
+a17 1
+%$Id: startup.m,v 1.2 1999/05/13 19:20:31 mah Exp mah $
+d19 3
+@
+
+
+1.2
+log
+@added demos2
+@
+text
+@d17 1
+a17 1
+%$Id: startup.m,v 1.1 1999/01/11 13:44:29 kay Exp mah $
+d19 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d12 1
+d17 5
+a21 2
+%$Id:$
+%$Log:$
+@

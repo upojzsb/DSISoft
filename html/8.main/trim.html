@@ -1,0 +1,45 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>trim</H1>
+<H2>(./main/trim.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[shift]=xcor_f(pilot,data,tmax)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=trim(datain,t1,t2,tmax)
+
+Trim Statics
+Used to align traces in time by making small adjustments.
+
+T1 and T2 are the start and end of the time window that will be used to
+align the traces.  A trace representing the sum of all traces in the
+record will be created within this time window and this summed trace
+will be cross correlated with each trace in the same time window.
+
+tmax is the maximum time shift that will be allowed i.e. it cross
+correlateion lag times will only be allowed between (tmax) and (-tmax)
+and a maximum will be found between these lag times.
+
+Time shifts will be stored in trace header word 25.
+
+Convention: positive value = shift traces down
+            negative value = shift traces up
+
+Successive applications of this module will improve final trace alignment.
+Similar to INSIGHT module 'trim'.
+
+DSI customized VSP processing software
+written by Kristen Beaty November, 1997
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../4.demos/demoproc.html">demoproc</A>       ./demos/demoproc.m</LI>
+<LI><A HREF = "../8.main/medirm.html">medirm</A>         ./main/medirm.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

@@ -1,0 +1,76 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+3.0
+date	2000.06.13.19.20.04;	author gilles;	state Exp;
+branches;
+next	;
+
+
+desc
+@Release 3
+@
+
+
+3.0
+log
+@*** empty log message ***
+@
+text
+@%crosswire file for reading trace header data into DSI format from Lithoprobe
+%segy format using segy2mat
+%segy type values are 1 for char, 2 for int16, 3 for int32
+%segy segy multiplier add	DSI 	description
+%byte type                  header
+%                           word
+13    3   1.0    0     1    % original trace#
+9     3   1.0    0     2    % FFID
+21    3   1.0    0     3    % CDP #
+29    2   1.0   -42    4    % trace component 43->1=vert 44->2=h1 45->3=h3
+%                     10    %trace end time (ms)
+%                     11    %scratch word used by getdat
+%                     12    %disk record fold
+181   3   1.0    0    14    %horizon bit mask
+185   3   0.0001    0    15    %first break time
+189   3   0.0001    0    16    %horizon 2 time
+193   3   0.0001    0    17    %horizon 3 time
+197   3   0.0001    0    18    %horizon 4 time
+201   3   0.0001    0    19    %horizon 5 time
+205   3   0.00001    0    20    %datum correction in seconds
+209   3   0.00001    0    21    %refraction shot static
+213   3   0.00001    0    22    %refraction receiver static
+217   3   0.00001    0    23    %Residual shot static
+221   3   0.00001    0    24    %Residual receiver static
+225   3   0.00001    0    25    %trim static applied to trace
+17	   3   1.0    0    26    %shot point number (source point ) 
+233   3   1.0    0    27    %receiver point number
+237   3   1.0    0    28    %Shot receiver offset
+77    3   1.0    0    29    % source northing 
+73    3   1.0    0    31    % source easting 
+45    3   1.0    0    33	 % source elevation 
+85    3   1.0    0    35    % recv northing
+81    3   1.0    0    37    % recv easting
+41    3   1.0    0    39    % recv elevation
+121   3   1.0    0    41    %cdp bin y coord (northing)
+125   3   1.0    0    43    %cdp bin x coord (easting)
+129   3   1.0    0    45    %cdp bin z coord (elevation)
+133   3   1.0    0    47    %cmp y coord (northing)
+137   3   1.0    0    49    %cmp x coord (easting)
+53    3   1.0    0    51    % datum elevation
+93    2   1.0    0    52    %replacement velocity
+37    3   0.0001    0    53    % source-recv offset (or other...)
+49    3   0.0001    0    54    % shot depth
+95    3   0.0001    0    55    % uphole time (ms?)
+141   3   0.0001    0    56    %wireline depth
+ 99   3   0.00001    0    57    %shot static at cdp
+101   3   0.00001    0    58    %receiver static at cdp
+145   3   0.0001    0    59    %ray parameter for Tau-p
+ 33   2   1.0    0    60    %stack fold
+149   3   0.00001    0    61    %1 way elev static at cdp (ms)
+153   3   0.00001    0    62    %1 way refraction static to surface at cdp (ms)
+157   3   0.00001    0    63    %1 way refraction static to bottoof hole (ms)
+103   3   0.00001    0    64    %total static at cd@

@@ -1,0 +1,31 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>sft</H1>
+<H2>(./main/sft.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=sft(datain,tr1,tr2,shift)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=sft(datain,tr1,tr2,shift)
+
+This function requires input data in DSI format.  A time
+shift can be applied by an amount given in the parameter 'shift' (sec).
+Shifts are to the nearest sampling point.  All time shifts will be
+recorded in trace header word 21 in seconds.
+
+tr1 and tr2 specify the first and last traces to apply the time shift to
+Shifts will be applies to all records.
+
+Convention: positive value = shift traces down
+            negative value = shift traces up
+
+DSI customized VSP processing software
+written by Kristen Beaty November, 1997
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

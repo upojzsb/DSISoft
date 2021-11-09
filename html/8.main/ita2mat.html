@@ -1,0 +1,34 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>ita2mat</H1>
+<H2>(./main/ita2mat.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[matfile]=ita2mat(fhfile,thfile,datfile);</pre>
+<HR><H3>Help text</H3>
+<pre>
+
+function [matfile]=ita2mat(fhfile,thfile,datfile);
+
+
+This function reads in the 3 output files from the
+ITA poststack module ita2mat and creates a datafile
+in the DSI processing software format.  The record
+structure of the ITA file is preserved in the <A HREF = "../4.demos/process.html">process</A>.
+
+fhfile = file header file
+thfile = trace header file
+datfile = data file
+
+The file names should be separated by commas
+and between single quotes (as strings)
+
+DSI customized VSP processing software
+written by Gervais Perron Feb. 1998
+</pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

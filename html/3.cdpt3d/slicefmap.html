@@ -1,0 +1,53 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./cdpt3d]</A>
+<H1>slicefmap</H1>
+<H2>(./cdpt3d/slicefmap.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=slicefmap(datain,rec,flag)</pre>
+<HR><H3>Help text</H3>
+<pre>
+[dataout]=slicefmap(datain,rec,flag)
+
+This is a function that will slice up a fold map created by performing 
+a 3D CDP transform on DSI data.  Use '<A HREF = "../6.display/dispseis.html">dispseis</A>' (DSISoft) or else 
+'pcolor' or 'imagesc' (MATLAB) to view the results.
+
+INPUT 
+datain - the results of performing a 3D CDP transform on the input data
+    format is a modified DSI variable.  File and trace headers still 
+    exist but the .dat section has been replaced with a .fmap 
+    extension which contains a cell array (records) of 3 dimensional 
+    arrays.  This is the results of the 3D CDP transform.  There are 
+    also .xsc, .ysc, and .zsc extensions, each containing vectors 
+    describing the coordinates of the centre of each of the bins.
+rec - record to work on
+flag - 1 for inline (x) slices
+     2 for crossline (y) slices
+     3 for time slices
+
+OUTPUT
+dataout - typical DSI variable except very few trace header words will be kept
+     start time, end time, and sampling rate will be stored as depth 
+     rather than time
+     each slice will be stored in a separate record
+     CDP Northing, Easting and Elevation (trace headers 41, 43, 45) will 
+     be stored where applicable, as will the CDP northing, easting and 
+     elevation bin numbers (trace headers 42, 44, 46)
+
+
+DSISoft Version 1.0
+Customized VSP Processing Software
+written by K.S. Beaty July, 1998
+last modified July 21, 1998
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../3.cdpt3d/rotcoord.html">rotcoord</A>       ./cdpt3d/rotcoord.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

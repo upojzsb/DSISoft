@@ -1,0 +1,39 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>kill</H1>
+<H2>(./main/kill.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=kill(datain,kword,bad)</pre>
+<HR><H3>Help text</H3>
+<pre>
+function [dataout]=kill(datain,kword,bad)
+
+similar to 'kill' module in INSIGHT
+marks bad traces by writing '-1' to trace header word 6
+marked traces will be omitted when using filtering modules
+marked traces can be removed using the function 'pack'
+
+datain is in DSI official data format
+kword is the trace header word number by which bad trace is identified
+       kword=1 sequential record number
+       kword=26 receiver station
+       kword=27 shot station
+bad is a vector of numbers identifying the traces to be flagged
+
+DSI customized VSP processing software
+written by Kristen Beaty October, 1997
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../9.picker/pick1comp.html">pick1comp</A>      ./picker/pick1comp.m</LI>
+<LI><A HREF = "../9.picker/pick1compplot.html">pick1compplot</A>  ./picker/pick1compplot.m</LI>
+<LI><A HREF = "../9.picker/pickfb.html">pickfb</A>         ./picker/pickfb.m</LI>
+<LI><A HREF = "../9.picker/pickplot.html">pickplot</A>       ./picker/pickplot.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

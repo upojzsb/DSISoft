@@ -1,0 +1,147 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+3.0
+date	2000.06.13.19.18.54;	author gilles;	state Exp;
+branches;
+next	2.2;
+
+2.2
+date	99.06.18.15.53.40;	author mah;	state Exp;
+branches;
+next	2.1;
+
+2.1
+date	99.05.28.13.29.47;	author mah;	state Exp;
+branches;
+next	2.0;
+
+2.0
+date	99.05.21.18.43.28;	author mah;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.05.21.18.19.18;	author mah;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+3.0
+log
+@Release 3
+@
+text
+@%Called by demo2 to perform median filtering
+
+%energy balance the data
+demodata=ener(demodata,0,1)
+
+%pad it with about a second of zeros at the end
+demodata=pad(demodata,0.5);
+ 
+%flatten the data on first breaks
+demodata=flat2(demodata,0.25,15);
+ 
+%median filter the data
+out2=medi_filt(demodata,13)
+ 
+demodata=subr(out2,demodata) %subtract the median filtered data from the original data
+ 
+demodata=unflat2(demodata,0.25,15); %unflatten the data
+temp=demodata.th{1}(15,:);
+temp=temp+0.005;
+demodata.th{1}(16,:)=temp;
+ 
+%demodata=mute(demodata,1,16); %mute out the first 5ms after the first breaks
+ 
+%demodata=tred(demodata,-3732,0.25); %flatten on the shear wave
+%out2=medi_filt(demodata,23)
+%demodata=subr(out2,demodata); %remove the shear wave
+%demodata=tred(demodata,3732,-0.25); %unflatten from the shear wave
+
+%demodata=mute(demodata,1,16); %remute out the first 5ms after the first breaks
+ 
+demodata=subset(demodata,1,103,0,1,1,1);
+
+clear out2;
+clear temp;
+
+state=3;
+disp('Median filtering has been applied.');
+disp('Please apply f-k Filtering next.');
+
+@
+
+
+2.2
+log
+@for different data set
+@
+text
+@@
+
+
+2.1
+log
+@updated program for smaller set of data
+@
+text
+@d3 3
+d7 1
+a7 1
+demodata=pad(demodata,1.0);
+d9 2
+a10 2
+%flatten the data on first breaks to get rid of down going energy
+demodata=flat2(demodata,0.05,15);
+d17 1
+a17 1
+demodata=unflat2(demodata,0.05,15); %unflatten the data
+a20 2
+demodata.th{2}(16,:)=temp;
+demodata.th{3}(16,:)=temp;
+d22 1
+a22 1
+demodata=mute(demodata,1,16); %mute out the first 5ms after the first breaks
+d24 4
+a27 4
+demodata=tred(demodata,-3732,0.25); %flatten on the shear wave
+out2=medi_filt(demodata,23)
+demodata=subr(out2,demodata); %remove the shear wave
+demodata=tred(demodata,3732,-0.25); %unflatten from the shear wave
+d29 1
+a29 1
+demodata=mute(demodata,1,16); %remute out the first 5ms after the first breaks
+d31 1
+a31 1
+demodata=subset(demodata,1,164,0,0.6,1,1);
+@
+
+
+2.0
+log
+@Release 2
+@
+text
+@d30 1
+a30 1
+demodata=subset(demodata,1,364,0,0.6,1,1);
+d38 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

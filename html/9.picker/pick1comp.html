@@ -1,0 +1,53 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./picker]</A>
+<H1>pick1comp</H1>
+<H2>(./picker/pick1comp.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[rec1,rec2,tr1,tr2,t1,t2,dir]=getstrings</pre>
+<HR><H3>Help text</H3>
+<pre>
+pick1comp
+Interactive module for picking first breaks on a single component or record.
+Has options for picking, killing traces, clear, zoom, and <A HREF = "../8.main/flat.html">flat</A>.
+Flat is for display only.  Killed traces are flagged in header word 6 if 'save'
+is chosen on exiting the program.  Pick times can be stored in a trace header
+word of the user's choice.  The default is word 15.
+
+picking is done as follows:
+	first mouse button: clears a single trace pick
+	second mouse button: selects a single trace pick
+	third mouse button: starts dragging a line
+	  followed by 1st or 3d button: erases picks on all selected traces
+	  followed by 2nd button: picks times on all selected traces
+
+DSI customized processing software
+written by K.S. Beaty February, 1998
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function calls
+<pre><UL>
+<LI><A HREF = "../8.main/agc.html">agc</A>            ./main/agc.m</LI>
+<LI><A HREF = "../8.main/ener.html">ener</A>           ./main/ener.m</LI>
+<LI><A HREF = "../8.main/flat.html">flat</A>           ./main/flat.m</LI>
+<LI><A HREF = "../8.main/kill.html">kill</A>           ./main/kill.m</LI>
+<LI><A HREF = "../9.picker/killint.html">killint</A>        ./picker/killint.m</LI>
+<LI><A HREF = "../9.picker/pick1compmenu.html">pick1compmenu</A>  ./picker/pick1compmenu.m</LI>
+<LI><A HREF = "../9.picker/pick1compplot.html">pick1compplot</A>  ./picker/pick1compplot.m</LI>
+<LI><A HREF = "../9.picker/pick1quit.html">pick1quit</A>      ./picker/pick1quit.m</LI>
+<LI><A HREF = "../9.picker/picktimes2.html">picktimes2</A>     ./picker/picktimes2.m</LI>
+<LI><A HREF = "../6.display/seisplot.html">seisplot</A>       ./display/seisplot.m</LI>
+<LI><A HREF = "../9.picker/tune1comp.html">tune1comp</A>      ./picker/tune1comp.m</LI>
+</UL></pre>
+This function is called by
+<pre><UL>
+<LI><A HREF = "../5.demos2/demo2.html">demo2</A>          ./demos2/demo2.m</LI>
+<LI><A HREF = "../4.demos/dsidemo.html">dsidemo</A>        ./demos/dsidemo.m</LI>
+<LI><A HREF = "../9.picker/pick1compmenu.html">pick1compmenu</A>  ./picker/pick1compmenu.m</LI>
+<LI><A HREF = "../9.picker/pick1compplot.html">pick1compplot</A>  ./picker/pick1compplot.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

@@ -1,0 +1,41 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>flat</H1>
+<H2>(./main/flat.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=flat(datain,flt_time,headw1)</pre>
+<HR><H3>Help text</H3>
+<pre>
+
+function [dataout]=flat(datain,flt_time,headw1)
+
+The funcion flat an the times stored in a header number to a desired time
+
+The flat function a seismic matrix with the flattened data
+Input arguments are:
+datain=	input data in official DSI format
+flt_time=	time at which to flat data in seconds
+headw1=	header word containing the picked times of the horizon
+
+DSI customized VSP processing software
+written by G. Perron
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../4.demos/demoproc.html">demoproc</A>       ./demos/demoproc.m</LI>
+<LI><A HREF = "../8.main/medirm.html">medirm</A>         ./main/medirm.m</LI>
+<LI><A HREF = "../9.picker/pick1comp.html">pick1comp</A>      ./picker/pick1comp.m</LI>
+<LI><A HREF = "../9.picker/pick1compplot.html">pick1compplot</A>  ./picker/pick1compplot.m</LI>
+<LI><A HREF = "../9.picker/pickfb.html">pickfb</A>         ./picker/pickfb.m</LI>
+<LI><A HREF = "../9.picker/pickplot.html">pickplot</A>       ./picker/pickplot.m</LI>
+<LI><A HREF = "../3.cdpt3d/plotbound.html">plotbound</A>      ./cdpt3d/plotbound.m</LI>
+<LI><A HREF = "../4.demos/process.html">process</A>        ./demos/process.m</LI>
+<LI><A HREF = "../8.main/unflat.html">unflat</A>         ./main/unflat.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

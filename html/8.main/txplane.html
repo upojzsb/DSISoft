@@ -1,0 +1,34 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>txplane</H1>
+<H2>(./main/txplane.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[t]=txplane(s,r,x,dip,strike,v)</pre>
+<HR><H3>Help text</H3>
+<pre>
+ txplane: function to calculate the traveltime in a medium with constant 
+ <A HREF = "../8.main/velocity.html">velocity</A> v, given a source at s=[sx;sy;sz] and receiver at r=[rx;ry;rz], 
+ with a reflection from a plane with given dip and strike, passing through
+ the point x=[x;y;z].
+ INPUT: s = [sx; sy; sz], source position
+        r = [rx; ry; rz], receiver position
+        x = [x; y; z], a point on the plane
+        v = <A HREF = "../8.main/velocity.html">velocity</A> of medium (constant)
+        dip = dip of plane (horizontal -&gt; dip=0 (degrees)
+        strike = strike of plane (clockwise from N in degrees)
+ OUTPUT: travel time.
+ Note, reflection point position is calculated but not yet returned.
+DSI customized VSP processing software
+by I. Kay (April 1999)
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../8.main/synplane.html">synplane</A>       ./main/synplane.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

@@ -1,0 +1,35 @@
+head	3.0;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+3.0
+date	2000.06.13.19.22.17;	author gilles;	state Exp;
+branches;
+next	;
+
+
+desc
+@Release 3
+@
+
+
+3.0
+log
+@*** empty log message ***
+@
+text
+@driv 'vspn526band2.sgy'
+open 2, 2, 'vspn526.dat'
+olis 'output.lis'
+ocrs 'itasegy2ita.crs'
+type 'SEGY'
+form 0
+tape 'file' 0 3 1
+chan 1 356 1
+key 0
+time 0 2 0
+samp 0.0005
+@

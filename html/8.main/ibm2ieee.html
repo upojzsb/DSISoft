@@ -1,0 +1,43 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>ibm2ieee</H1>
+<H2>(./main/ibm2ieee.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>d = ibm2ieee (ibmf)</pre>
+<HR><H3>Help text</H3>
+<pre>
+ Name:         ibm2ieee
+ Abstract:     convert a matrix of IBM/360 32-bit floats
+               to IEEE doubles.
+
+               IBMF is the matrix of IBM/360 32-bit floats each
+               stored as a 32 bit unsigned big-endian integer
+               in a MATLAB double.
+
+               The format of a IBM/360 32-bit float is:
+                  sign 7-bit exponent  24 bit fraction
+                  The base is 16. The decimal point is to
+                  the left of the fraction. The exponent is
+                  biased by +64.
+
+               The basic idea is that you use floating point on
+               the various fields.
+
+               ieee = sign * 16 ^ (exponent - 64) * fraction / 16 ^ 6
+
+ By:           Martin Knapp-Cordes
+               The MathWorks, Inc.
+
+ Date(s):      Jun 95 - 28, 29
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../8.main/segy2mat.html">segy2mat</A>       ./main/segy2mat.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

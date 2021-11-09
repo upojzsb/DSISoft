@@ -1,0 +1,44 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>rot3c</H1>
+<H2>(./main/rot3c.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=rot3c(datain,headw1,tstart,tend,comp1,comp2)</pre>
+<HR><H3>Help text</H3>
+<pre>
+rot3c - function to rotate horizontal components for borehole data (DSI etc.) 
+into radial and transverse components
+It is done by performing 1 degree increments in rotation and then checking for the best rotation
+
+function [dataout]=rot3c(datain,headw1,tstart,tend,comp1,comp2)
+
+INPUT VARIABLES
+'datain' must be in official DSI data format
+each record must represent a component x, y, or z in that order
+this can be achieved using '<A HREF = "../8.main/sortrec.html">sortrec</A>'
+
+ headw1 = header word containing first break picks
+ tstart and tend = time interval before and after first breaks in seconds to be analyzed for proper rotation
+ comp1 = component to be maximized
+ comp2 = component to be minimized
+
+ Please note: Software does not check for reasonable parameters or dead traces
+
+DSIsoft ver 2.0
+DSI customized VSP processing software
+
+by G. Perron (Nov 15th, 1996)
+based on rot3c_dirp from S. Guest and D. Eaton+
+Rewritten by Marko Mah February 1999
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../11.qc_dsi/qc_dsi.html">qc_dsi</A>         ./qc_dsi/qc_dsi.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>

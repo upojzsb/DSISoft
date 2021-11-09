@@ -1,0 +1,53 @@
+<TITLE>/</TITLE>
+<BODY>
+<A HREF = "../index.html">[Master Index]</A>
+<A HREF = "index.html">[Index for ./main]</A>
+<H1>rot3c_eig</H1>
+<H2>(./main/rot3c_eig.m)</H2>
+<HR><H3>Function Synopsis</H3>
+<pre>[dataout]=rot3c_eig(datain,headw1,tint,comp1,comp2)</pre>
+<HR><H3>Help text</H3>
+<pre>
+rot3c_eig -&gt; function to rotate components of 3-C borehole data (DSI etc.)
+into radial and transverse components using matrix eigenvalue algorithm.
+
+function [dataout]=rot3c_eig(datain,headw1,tint,comp1,comp2)
+
+
+INPUT VARIABLES
+'datain' must be in official DSI data format
+Each record must represent a component h1, h2, or z.
+This can be achieved using '<A HREF = "../8.main/sortrec.html">sortrec</A>'.
+
+headw1 = 	header word containing first break picks
+tint =         time window to use around first breaks (s)
+(window starts 'tint' sec. before pick and ends 'tint' sec. after pick
+comp1 =        record representing one of the components to be rotated
+comp2 =        record number of other component to be rotated
+
+OUTPUT VARIABLES
+Trace header word 4 contains component information.
+This word will be incremented by 3 for components that have
+been rotated.
+
+By convention: h1=&gt;1; h2=&gt;2; z=&gt;3; radial or oriented horizontal=&gt;4;
+transverse horizontal=&gt;5; direct P-arrival (Pd)=&gt;6; orthoganal
+component to Pd=&gt;7 (see Handbook of Geophysical Exploration, sect.1,vol.14B).  
+Components 6 and 7 are the results of rotating 3 and 4; 4 and 5 are
+the results of rotating 1 and 2.
+The largest singular value of the covarience matrix is stored in header
+word 10, and the ratio of sigular value 2 to singular value 1 is stored 
+in word 11.
+
+DSI customized VSP processing software
+by I. Kay and G. Perron (Jan 1998)
+</pre>
+<HR><H3>Cross-Reference Information</H3>This function is called by
+<pre><UL>
+<LI><A HREF = "../9.picker/pickfb.html">pickfb</A>         ./picker/pickfb.m</LI>
+</UL></pre>
+<HR>
+Produced by <A HREF = "http://www.nd.edu/Courses/kantor/matlab/mat2html">mat2html</A> on Wed Jun 14 15:21:32 Canada/Eastern 2000
+<BR>
+Cross-Directory links are: ON<BR>
+</BODY>
