@@ -112,7 +112,7 @@ case 'plot'
    end %if
    dx=str2num(dx);
    if rec>datain.fh{12}
-      msgbox(['This dataset only has ',num2str(datain.fh{12},' records.  Try again.','Warning','warn');
+      msgbox(['This dataset only has ',num2str(datain.fh{12}),' records.  Try again.','Warning','warn']);
       return
    end %if
 
